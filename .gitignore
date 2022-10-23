@@ -1,3 +1,8 @@
 .vscode/
 *.exe
 .env
+.metals
+.bloop
+project
+target
+.scalafmt.conf
