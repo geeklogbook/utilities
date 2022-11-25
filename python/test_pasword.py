@@ -7,9 +7,10 @@ numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 # Define fixed values here
 password = input("Create password: ")
-print(password)
-print(len(password))
+
+# Count elements in the password
 len_password = len(password)
+# TODO: need to count properly count function is not ok implemented -> TypeError: must be str, not list
 count_alphabetic_characters = password.count(alphabetic_characters)
 count_special_characters = password.count(special_characters)
 count_numbers = password.count(numbers)
