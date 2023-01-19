@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int matrizAleatoria()
+int randomMatrix()
 {
     for (int i = 0; i < 10; i++)
     {
@@ -12,5 +12,5 @@ int matrizAleatoria()
 
 void main()
 {
-    matrizAleatoria();
+    randomMatrix();
 }
