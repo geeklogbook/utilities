@@ -1,10 +1,3 @@
-# Check that a dataset contains rows
-# checks for country:
-#   - row_count > 0
-# checks for country:
-#   - failed rows:
-#       fail query: |
-#         SELECT DISTINCT continent FROM country as CONTINENT
 checks for country:
   - failed rows:
       fail query: |
@@ -13,3 +6,6 @@ checks for country:
           )
           
           SELECT * FROM continent WHERE quantity != 7
+  - continents = 7:
+      continents query: |
+        SELECT COUNT(DISTINCT continent) AS quantity FROM country
