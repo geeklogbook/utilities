@@ -1,0 +1,6 @@
+data_source world:
+  type: mysql
+  host: localhost
+  username: testsoda
+  password: '?L@BtB$9at8A[rs'
+  database: world
