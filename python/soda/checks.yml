@@ -1,4 +1,5 @@
 checks for country:
+  # FAILED ROW CHECKS -> https://docs.soda.io/soda-cl/failed-rows-checks.html
   - failed rows:
       fail query: |
           WITH continent AS (
@@ -6,6 +7,7 @@ checks for country:
           )
           
           SELECT * FROM continent WHERE quantity != 7
+  # USER DEFINED CHECKS -> https://docs.soda.io/soda-cl/user-defined.html
   - continents = 7:
       continents query: |
         SELECT COUNT(DISTINCT continent) AS quantity FROM country
