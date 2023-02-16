@@ -1,3 +1,2 @@
-soda test-connection -d world -c configuration.yml -V
-
-soda scan -d world -c configuration.yml checks.yml
+soda test-connection -d world -c conf/mysql.yml -V
+soda scan -d world -c conf/mysql.yml distinct_continent.yml
