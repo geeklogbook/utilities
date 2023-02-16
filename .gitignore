@@ -7,3 +7,4 @@ project
 target
 .scalafmt.conf
 /javascript/whale_alert_scrapper/node_modules
+__pycache__
