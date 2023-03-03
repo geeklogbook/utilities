@@ -10,12 +10,15 @@ class Person:
 
         for _ in range(size):
             data = {
-                'id': fake.unique.random_int(),
-                'name': fake.name(),
+                # From -> https://faker.readthedocs.io/en/master/providers/faker.providers.person.html
+                'first_name': fake.first_name(),
+                'last_name': fake.last_name(),
+                # From -> https://faker.readthedocs.io/en/master/providers/faker.providers.date_time.html
+                'birth_date': fake.date(),
                 'email': fake.free_email(),
-                'country': fake.country(),
-                'city': fake.city(),
                 'address': fake.street_address(),
+                'city': fake.city(),
+                'country': fake.country(),
                 }
 
             generated = pd.DataFrame(data, index=[0])
