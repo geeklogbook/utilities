@@ -1,3 +1,5 @@
+#Question: https://stackoverflow.com/questions/76584417/scraping-top-250-movies-from-imdb-website/76584747#76584747
+
 import requests
 from bs4 import BeautifulSoup
 
