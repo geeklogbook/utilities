@@ -1,4 +1,4 @@
-#Insipred in this question: https://stackoverflow.com/questions/75557226/sql-query-to-find-sum-of-two-particular-rows
+--Insipred in this question: https://stackoverflow.com/questions/75557226/sql-query-to-find-sum-of-two-particular-rows
 CREATE TABLE IF NOT EXISTS users(
 `id` int,
 `name` VARCHAR(10),

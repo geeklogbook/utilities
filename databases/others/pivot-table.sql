@@ -1,4 +1,4 @@
-# Pivot
+-- Pivot
 CREATE DATABASE IF NOT EXISTS testing_database;
 USE testing_database;
 DROP TABLE IF EXISTS store;
