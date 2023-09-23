@@ -1,20 +1,51 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.by import By
+from selenium import webdriver
 import time
 
-driver = webdriver.Firefox()
-driver.get("https://www.padron.gob.ar/publica/")
+provinces_blank = []
+charge_blank = []
+
+#Error: Capital Federal, Buenos Aires, Santiago del Estero
+#provinces = ['CATAMARCA', 'CORDOBA', 'CORRIENTES', 'CHACO', 'CHUBUT', 'ENTRE RIOS', 'FORMOSA', 'JUJUY', 'LA PAMPA', 'LA RIOJA', 'MENDOZA', 'MISIONES', 'NEUQUEN', 'RIO NEGRO', 'SALTA', 'SAN JUAN', 'SAN LUIS', 'SANTA CRUZ', 'SANTA FE', 'TUCUMAN', 'TIERRA DEL FUEGO']
+provinces = ['SALTA', 'SAN JUAN', 'SAN LUIS', 'SANTA CRUZ', 'SANTA FE', 'TUCUMAN', 'TIERRA DEL FUEGO']
+charge = ['DIPUTADO NACIONAL', 'PARLAMENTARIO MERCOSUR DN', 'PARLAMENTARIO MERCOSUR DR', 'PRESIDENTE Y VICE']
+
+for province in provinces:
+    print(province)
+    driver = webdriver.Firefox()
+    driver.get("https://www.padron.gob.ar/publica/")
+    driver.find_element(By.ID, "site").click()
+    time.sleep(5)
+    select_site = Select(driver.find_element(By.ID, "site"))
+    select_site.select_by_visible_text(province) # Select Distrito Electoral
+    driver.find_element(By.ID, "tabgreen").click()
+    time.sleep(10)
+    driver.find_element(By.ID, "carg").click() # Select Consultar Cargo
+    select_cargo = Select(driver.find_element(By.ID, "carg"))
+    select_cargo.select_by_visible_text('PRESIDENTE Y VICE')
+    driver.find_element(By.ID, "btnVer").click()
+    time.sleep(10)
+    driver.find_element(By.ID, "btnExcel").click() #"Export File
+    time.sleep(10)
+    driver.quit()
 
 
-driver.find_element(By.ID, "site").click()
-select_site = Select(driver.find_element(By.ID, "site"))
-#select_site.select_by_value("03   ")
-select_site.select_by_visible_text("CATAMARCA")
-driver.find_element(By.ID, "tabgreen").click()
-driver.find_element(By.ID, "carg").click()
-select_cargo = Select(driver.find_element(By.ID, "carg"))
-select_cargo.select_by_index(1)
-driver.find_element(By.ID, "btnVer").click()
-time.sleep(10)
-driver.find_element(By.ID, "btnExcel").click()
+#GIVE ME A LIST WITH PROVINCES AND CHARGES
+# driver = webdriver.Firefox()
+# driver.get("https://www.padron.gob.ar/publica/")
+# driver.find_element(By.ID, "site").click()
+# time.sleep(5)
+# select_site = Select(driver.find_element(By.ID, "site"))
+# options = [option.text for option in select_site.options]
+# for option in options:
+#     provinces_blank.append(option)
+# select_site.select_by_visible_text("CATAMARCA") # Select Distrito Electoral
+# driver.find_element(By.ID, "tabgreen").click()
+# driver.find_element(By.ID, "carg").click() # Select Consultar Cargo
+# select_cargo = Select(driver.find_element(By.ID, "carg"))
+# options_cargo = [option.text for option in select_cargo.options]
+# for option in options_cargo:
+#     charge_blank.append(option)
+# print(charge_blank)
+# print(provinces_blank)
