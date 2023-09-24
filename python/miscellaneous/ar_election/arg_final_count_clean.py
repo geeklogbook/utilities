@@ -3,9 +3,7 @@ import datetime
 import xlrd
 import os
 
-#path_input = "C:\\Users\\jchemile\\Documents\\geeklogbook\\utilities\\datasources\\ar_elections\\raw\\diputados\\zona_DN_DIST_05.xls"
 path_output = "C:\\Users\\jchemile\\Documents\\geeklogbook\\utilities\\datasources\\ar_elections\\clean\\presidente_y_vice\\"
-
 
 def _election_information(sheet):
     # Access cell E4 and get its value
