@@ -18,4 +18,4 @@ print(data)
 #         result = r.get(url, verify=False).status_code
 #         with open("url_with_information.csv", "w") as file:
 #             file.write(url, result)
-#         # print(url, result)
+#         # print(url, result)git
