@@ -1,7 +1,8 @@
 import csv
 
-file_path = "C:\\Users\\jchemile\\Documents\\geeklogbook\\utilities\\datasources\\2023_PASO\\ResultadosElectorales.csv"
-ouptput_path = "C:\\Users\\jchemile\\Documents\\geeklogbook\\utilities\\datasources\\2023_PASO\\"
+root_path = "C:\\Users\\jchemile\\Documents\\geeklogbook\\utilities\\datasources\\arg_elections\\provisorio_2023_paso\\"
+file_path = root_path + "source\\ResultadosElectorales.csv"
+ouptput_path =  root_path + "out\\"
 
 file = open(file_path, 'r', encoding="utf8")
 reader = csv.reader(file)
@@ -14,5 +15,3 @@ with open(ouptput_path + "buenosaires.csv", "w", encoding="utf8", newline='') as
     for row in reader:
         if row[4] == '2':
             write.writerow(row)
-
-
