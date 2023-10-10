@@ -1,5 +1,4 @@
-b - Install and add a Potgress SQL Database and change the psql superuser
-status from postgress systemctl status postgresql
+
 1 - Install and connect to raspberry: https://pimylifeup.com/raspberry-pi-postgresql/
 -> run the command line interface by running the following command: psql
 -> you can exist the comman line interface with exit
