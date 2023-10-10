@@ -12,8 +12,16 @@ In this note you're going to find how to configure the Raspberry.
 
 # Useful conmands
 ## Connect to your raspberry by ssh
+
 ```
 ssh nameoftheuser@location -> Ej: jino@myraspberryhome
+```
+
+## If you want to know since when the server is up
+```
+uptime -> Since when your server is up
+w - Users connected to your server and since when is up
+
 ```
 
 
