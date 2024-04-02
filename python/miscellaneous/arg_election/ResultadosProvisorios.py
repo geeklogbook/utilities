@@ -1,6 +1,6 @@
 import csv
 
-root_path = "C:\\Users\\jchemile\\Documents\\geeklogbook\\utilities\\datasources\\arg_elections\\provisorio_2023_paso\\"
+root_path = ""
 file_path = root_path + "source\\ResultadosElectorales.csv"
 ouptput_path =  root_path + "out\\"
 

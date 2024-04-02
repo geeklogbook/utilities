@@ -13,7 +13,7 @@ def combine_csv_files(root_folder):
 
     return all_data
 
-root_folder = "C:\\Users\\jchemile\\Documents\\geeklogbook\\utilities\\datasources\\ar_elections\\clean\\"
+root_folder = ""
 combined_data = combine_csv_files(root_folder)
 
 combined_data.to_csv(root_folder + "allOutputs.csv", encoding='utf-8-sig', index=False)

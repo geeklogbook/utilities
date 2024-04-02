@@ -1,4 +1,31 @@
-docker run [image] -> Download, build, run
-docker images -> informatio about the images -> docker images | head -> less verbose
-docker stop [container id] -> stop the container
-docker stop $(docker ps -a -q). -> Stop all the containers
+# Docker Images
+
+This is the place where are located the images from the services used for development, test, or create a POC.
+
+It includes
+1. Airflow
+1. Flask
+1. Postgres
+
+## Useful Commands
+
+### List the containers
+```Docker ps```
+### Docker run
+```docker run [image]```
+
+### Information about images
+
+```docker images``` 
+
+### Information about images less verbose
+
+```docker images | head```
+
+### Stop container
+
+```docker stop [container id]```
+
+### Stop all the containers
+
+```docker stop $(docker ps -a -q).```

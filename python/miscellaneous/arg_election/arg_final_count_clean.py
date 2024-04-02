@@ -3,7 +3,7 @@ import datetime
 import xlrd
 import os
 
-path_output = "C:\\Users\\jchemile\\Documents\\geeklogbook\\utilities\\datasources\\ar_elections\\clean\\presidente_y_vice\\"
+path_output = ""
 
 def _election_information(sheet):
     # Access cell E4 and get its value
@@ -54,7 +54,7 @@ def _get_excel_files_with_full_path(path):
     excel_files = [os.path.join(path, f) for f in os.listdir(path) if f.endswith('.xlsx') or f.endswith('.xls')]
     return excel_files
 
-path_root = 'C:\\Users\\jchemile\\Documents\\geeklogbook\\utilities\datasources\\ar_elections\\raw\\presidente_y_vice\\'
+path_root = ''
 path_files = _get_excel_files_with_full_path(path_root)
 
 for path_input in path_files:
