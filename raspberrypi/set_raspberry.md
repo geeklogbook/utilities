@@ -1,6 +1,6 @@
 # Seting up the Raspberry Py
 
-In this note you're going to find how to configure the Raspberry.
+This notes have the purpose of being an small set of steps to install and run the raspberry py and docker.In this note you're going to find how to configure the Raspberry.
 
 1. Choose the operating system you want to use in the imager: [imager](https://www.raspberrypi.com/software/) 
 1. Change the hostname to one that is not for default.
