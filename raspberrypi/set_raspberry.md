@@ -1,4 +1,5 @@
 # Seting up the Raspberry Py
+Last Updated 20240413
 
 This notes have the purpose of being an small set of steps to install and run the raspberry py and docker.In this note you're going to find how to configure the Raspberry.
 
@@ -24,10 +25,11 @@ w - Users connected to your server and since when is up
 
 ```
 
+## Change and set an static IP
 
-Last Updated 20230710
+modify /etc/dhcpcd.conf
 
-# TODOS
-- Use an OS that is not visual instead of one with GUI
-- ssh conection
-- disable autologin
+- interface wlan0 or eth0
+- static ip_address=
+- static routers=
+- static domain_name_servers=
