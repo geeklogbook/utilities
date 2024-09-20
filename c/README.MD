@@ -1,0 +1,1 @@
+gcc path_to_the_c_program -o nameyouwanttoadd
