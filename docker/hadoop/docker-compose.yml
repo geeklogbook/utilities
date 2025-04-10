@@ -1,0 +1,43 @@
+services:
+  hadoop-namenode:
+    image: uracilo/hadoop
+    container_name: hadoop-namenode
+    hostname: hadoop-namenode
+    depends_on:
+      - hadoop-datanode1
+      - hadoop-datanode2
+    networks:
+      - hadoop
+    ports:
+      - "50070:50070"
+      - "8088:8088"
+      - "9870:9870"
+      - "9000:9000"
+    restart: always
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./hadoop-config:/root/hadoop-config
+    entrypoint: ["/bin/bash", "-c", "hdfs namenode -format && $HADOOP_HOME/sbin/start-dfs.sh && tail -f /dev/null"]
+
+  hadoop-datanode1:
+    image: uracilo/hadoop
+    container_name: hadoop-datanode1
+    hostname: hadoop-datanode1
+    networks:
+      - hadoop
+    stdin_open: true
+    tty: true
+
+  hadoop-datanode2:
+    image: uracilo/hadoop
+    container_name: hadoop-datanode2
+    hostname: hadoop-datanode2
+    networks:
+      - hadoop
+    stdin_open: true
+    tty: true
+
+networks:
+  hadoop:
+    driver: bridge
