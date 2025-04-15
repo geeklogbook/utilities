@@ -2,11 +2,6 @@
 
 This is the place where are located the images from the services used for development, test, or create a POC.
 
-It includes
-1. Airflow
-1. Flask
-1. Postgres
-
 ## Useful Commands
 
 ### List the containers
